@@ -1,0 +1,17 @@
+# =============================================
+# Terraform Variables Example
+# Copy this file to terraform.tfvars and fill in
+# =============================================
+
+# EC2 Configuration
+instance_type = "t3.small"          # Use t3.small during migration, then t3.nano
+
+# SSH Key (must exist locally)
+key_name = "pixels-wp-key"
+
+# RDS Database Password (MUST be strong - at least 16 characters)
+db_password = "CHANGE_ME_TO_A_STRONG_PASSWORD_123!"
+
+# Optional
+environment = "prod"
+volume_size = 30
