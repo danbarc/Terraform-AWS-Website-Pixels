@@ -19,7 +19,7 @@ This repository contains the IaC (Infrastructure as Code) for the **pixels.dev.b
 
 ## Project Structure
 
-```bash
+```
 Terraform-AWS-Website-Pixels/
 ├── main.tf                 # Core infrastructure (VPC, EC2, RDS)
 ├── provider.tf
@@ -30,6 +30,7 @@ Terraform-AWS-Website-Pixels/
 ├── .gitignore
 ├── README.md
 └── terraform.tfvars.example
+```
 
 ## How to Deploy
 
@@ -42,25 +43,25 @@ terraform plan
 # 3. Deploy
 terraform apply
 
-Important Notes
+## Important Notes
 
-Use t3.small during migration, then downgrade to t3.nano for cost savings
-Database password is defined in terraform.tfvars
-SSL is managed with Let's Encrypt (Certbot)
-Access the server using: aws ssm start-session --target <instance-id>
+- Use t3.small during migration, then downgrade to t3.nano for cost savings
+- Database password is defined in terraform.tfvars
+- SSL is managed with Let's Encrypt (Certbot)
+- Access the server using: aws ssm start-session --target <instance-id>
 
-Post-Deployment Tasks
+## Post-Deployment Tasks
 
-Run Certbot for HTTPS
-Update WordPress URLs using WP-CLI
-Clean up Duplicator files (installer.php + archive.zip) for security
-Consider enabling CloudFront + WAF in the future
+- Run Certbot for HTTPS
+- Update WordPress URLs using WP-CLI
+- Clean up Duplicator files (installer.php + archive.zip) for security
+- Consider enabling CloudFront + WAF in the future
 
-Technologies
+## Technologies
 
-Terraform
-AWS (EC2, RDS, Route 53, VPC)
-WordPress
-Apache + PHP 8.5 + Let's Encrypt
+- Terraform
+- AWS (EC2, RDS, Route 53, VPC)
+- WordPress
+- Apache + PHP 8.5 + Let's Encrypt
 
 Made specially for pixels.dev.br
