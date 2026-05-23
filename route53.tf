@@ -26,7 +26,7 @@ resource "aws_route53_record" "pixels_dev_br_root" {
   name    = "pixels.dev.br"
   type    = "A"
   ttl     = 300
-  records = ["18.230.130.74"]
+  records = ["56.124.85.173"]
 }
 
 resource "aws_route53_record" "pixels_dev_br_www" {
