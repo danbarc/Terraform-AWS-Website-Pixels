@@ -1,0 +1,24 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+*.tfvars.json
+crash.log
+.terraform.lock.hcl
+
+# Sensitive files
+*.pem
+*.pub
+userdata.sh.bak
+*.bak
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+session-manager-plugin.pkg
